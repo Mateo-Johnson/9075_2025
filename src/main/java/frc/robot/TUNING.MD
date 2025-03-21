@@ -11,7 +11,7 @@ COMMON ISSUES:
 
      ROBOT DRIVES IN UNEXPECTED DIRECTIONS - Usually caused by incorrect coordinate system implementation. Invert the controls in RobotContainer.java.
 
-     SMARTDASHBOARD DATA IS THE OPPOSITE OF WHAT IS HAPPENING - Remove the negative sign (-) from the offending value.
+     SMARTDASHBOARD DATA IS THE OPPOSITE OF WHAT IS HAPPENING - Remove the negative sign (-) from the offending value within Drivetrain.java, specifically the odometry & pose estimator sections.
 
      MODULES DRIFT OVER MULTIPLE CODE DEPLOYS - Make sure that when you deploy code, you move the robot a littl forward so that it is perfectly straight.
 
