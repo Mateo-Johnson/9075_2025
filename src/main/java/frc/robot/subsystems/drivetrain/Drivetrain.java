@@ -5,6 +5,7 @@ import com.pathplanner.lib.auto.AutoBuilder;
 import com.pathplanner.lib.config.PIDConstants;
 import com.pathplanner.lib.config.RobotConfig;
 import com.pathplanner.lib.controllers.PPHolonomicDriveController;
+
 import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.math.estimator.SwerveDrivePoseEstimator;
 import edu.wpi.first.math.geometry.Pose2d;
@@ -126,6 +127,11 @@ public class Drivetrain extends SubsystemBase {
             m_rearLeft.getPosition(),
             m_rearRight.getPosition()
         });
+
+    // POSITIONING DATA
+    SmartDashboard.putNumber("DT/X", m_odometry.getPoseMeters().getY());
+    SmartDashboard.putNumber("DT/Y", m_odometry.getPoseMeters().getY());
+    SmartDashboard.putNumber("DT/ROTATION", getHeading());
 
     // MODULE OFFSETS (USE FOR TUNING)
     SmartDashboard.putNumber("DT/FL", m_frontLeft.getAngle());
