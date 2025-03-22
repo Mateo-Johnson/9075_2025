@@ -33,7 +33,7 @@ public final class Constants {
     // Driving
     public static final int kFrontLeftDrivingCanId = 8;
     public static final int kRearLeftDrivingCanId = 5;
-    public static final int kFrontRightDrivingCanId = 9; // THIS ONE
+    public static final int kFrontRightDrivingCanId = 1; // THIS ONE
     public static final int kRearRightDrivingCanId = 3;
 
     // Turning
@@ -52,10 +52,10 @@ public final class Constants {
     public static final int pigeonID = 20; 
 
     // Module offsets
-    public static final double kFrontLeftOffset = 0; // TUNE THIS
-    public static final double kFrontRightOffset = 0; // TUNE THIS
-    public static final double kRearLeftOffset = 0; // TUNE THIS
-    public static final double kRearRightOffset = 0; // TUNE THIS
+    public static final double kFrontLeftOffset = -0.30029296875; // TUNE THIS
+    public static final double kFrontRightOffset = -0.480224609375; // TUNE THIS
+    public static final double kRearLeftOffset = -0.68310546875; // TUNE THIS
+    public static final double kRearRightOffset = -0.77685546875; // TUNE THIS
   }
 
   public static final class ModuleConstants {

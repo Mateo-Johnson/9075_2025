@@ -77,6 +77,7 @@ public class Drivetrain extends SubsystemBase {
         m_rearRight.getPosition()
     },
     new Pose2d()  // Initial pose
+    
 );
 
   public Drivetrain() {
