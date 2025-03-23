@@ -10,6 +10,9 @@ import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.subsystems.drivetrain.Drivetrain;
+import frc.robot.subsystems.elevator.Elevator;
+import frc.robot.subsystems.elevator.commands.ManualDown;
+import frc.robot.subsystems.elevator.commands.ManualUp;
 import frc.robot.utils.Constants.OIConstants;
 
 /**
@@ -21,6 +24,7 @@ import frc.robot.utils.Constants.OIConstants;
 public class RobotContainer {
 
   final Drivetrain m_drivetrain;
+  final Elevator m_elevator;
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController =
@@ -31,6 +35,7 @@ public class RobotContainer {
   public RobotContainer() {
     
     m_drivetrain = new Drivetrain();
+    m_elevator = new Elevator();
 
               m_drivetrain.setDefaultCommand( // IF THE DRIVETRAIN ISN'T DOING ANYTHING ELSE, DO THIS
         new RunCommand(() -> {
@@ -57,6 +62,8 @@ public class RobotContainer {
    */
   private void configureBindings() {
 
+    m_driverController.povUp().whileTrue(new ManualUp(m_elevator,0.1)); // Move elevator up when D-Pad up is pressed
+    m_driverController.povDown().whileTrue(new ManualDown(m_elevator,0.1)); // Move elevator down when D-Pad down is pressed
   }
 
   /**
