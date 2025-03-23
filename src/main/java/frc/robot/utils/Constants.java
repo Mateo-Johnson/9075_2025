@@ -22,10 +22,10 @@ public final class Constants {
     public static final double kWheelBase = Units.inchesToMeters(23.75); // TUNE THIS, THIS SHOULD MATCH THE LENGTH OF THE ROBOT
 
     public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(
-      new Translation2d(kWheelBase / 2, kTrackWidth / 2), // Front Left
-      new Translation2d(kWheelBase / 2, -kTrackWidth / 2), // Front Right
-      new Translation2d(-kWheelBase / 2, kTrackWidth / 2), // Rear Left
-      new Translation2d(-kWheelBase / 2, -kTrackWidth / 2)); // Rear Right
+      new Translation2d(-kWheelBase / 2, -kTrackWidth / 2), // Front Left
+      new Translation2d(-kWheelBase / 2, kTrackWidth / 2), // Front Right
+      new Translation2d(kWheelBase / 2, -kTrackWidth / 2), // Rear Left
+      new Translation2d(kWheelBase / 2, kTrackWidth / 2)); // Rear Right
 
     // SparkMax CAN IDs
 
@@ -52,10 +52,10 @@ public final class Constants {
     public static final int pigeonID = 20; 
 
     // Module offsets
-    public static final double kFrontLeftOffset = -0.700927734375; // TUNE THIS
-    public static final double kFrontRightOffset = -0.46826171875; // TUNE THIS
-    public static final double kRearLeftOffset = -0.304443359375; // TUNE THIS
-    public static final double kRearRightOffset = -0.764892578125; // TUNE THIS
+    public static final double kFrontLeftOffset = -0.19384765625; // TUNE THIS
+    public static final double kFrontRightOffset = -0.518310546875; // TUNE THIS
+    public static final double kRearLeftOffset = -0.203125; // TUNE THIS
+    public static final double kRearRightOffset = -0.7685546875; // TUNE THIS
   }
 
   public static final class ModuleConstants {
