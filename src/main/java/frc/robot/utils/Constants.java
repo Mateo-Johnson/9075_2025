@@ -52,10 +52,10 @@ public final class Constants {
     public static final int pigeonID = 20; 
 
     // Module offsets
-    public static final double kFrontLeftOffset = -0.194580078125; // TUNE THIS
-    public static final double kFrontRightOffset = -0.022216796875; // TUNE THIS
-    public static final double kRearLeftOffset = -0.689453125; // TUNE THIS
-    public static final double kRearRightOffset = -0.77685546875; // TUNE THIS
+    public static final double kFrontLeftOffset = -0.19384765625; // TUNE THIS
+    public static final double kFrontRightOffset = -0.47509765625; // TUNE THIS
+    public static final double kRearLeftOffset = -0.809814453125; // TUNE THIS
+    public static final double kRearRightOffset = -0.77392578125; // TUNE THIS
   }
 
   public static final class ModuleConstants {
