@@ -17,7 +17,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 // Ignore all of the things that are commented out, they are not relevant to the current lift system - Mateo
 public class Elevator extends SubsystemBase {
     
-    private final SparkMax motor = new SparkMax(11, MotorType.kBrushless);
+    private final SparkMax motor = new SparkMax(10, MotorType.kBrushless);
     // private final SparkClosedLoopController pidController = motor.getClosedLoopController();
     // private final RelativeEncoder encoder = motor.getEncoder();
 

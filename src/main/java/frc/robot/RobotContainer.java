@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import java.util.Set;
+
 import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RunCommand;
@@ -29,7 +31,8 @@ public class RobotContainer {
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController =
       new CommandXboxController(OIConstants.kDriverControllerPort);
-
+  private final CommandXboxController m_componentController =
+      new CommandXboxController(1);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -62,8 +65,11 @@ public class RobotContainer {
    */
   private void configureBindings() {
 
-    m_driverController.povUp().whileTrue(new ManualUp(m_elevator,0.1)); // Move elevator up when D-Pad up is pressed
-    m_driverController.povDown().whileTrue(new ManualDown(m_elevator,0.1)); // Move elevator down when D-Pad down is pressed
+    m_componentController.povUp().whileTrue(new ManualUp(m_elevator,0.5)); // Move elevator up when D-Pad up is pressed
+    m_componentController.povDown().whileTrue(new ManualDown(m_elevator,0.25)); // Move elevator down when D-Pad down is pressed
+    m_componentController.button(1).whileTrue(coral.set 1);
+    //m_driverController.button(1).whileTrue
+  
   }
 
   /**
