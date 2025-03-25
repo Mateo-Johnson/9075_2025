@@ -89,8 +89,10 @@ public class RobotContainer {
     m_componentController.button(3).whileTrue(new PneumaticsOut(m_pneumatics)); //Move Pneumatics Out 
     m_componentController.button(4).whileTrue(new LiftUp(m_lift, 1)); //Lift The Robot 
     m_componentController.button(1).whileTrue(new LiftDown(m_lift, 1)); //Lift The Robot 
-    m_componentController.leftBumper().whileTrue(new coralIn(m_coral));
-    m_componentController.rightBumper().whileTrue(new coralOut(m_coral));
+    //m_componentController.leftBumper().whileTrue(new coralIn(m_coral));
+    //m_componentController.rightBumper().whileTrue(new coralOut(m_coral));
+    m_driverController.button(1).whileTrue(new coralIn(m_coral, 1));
+    m_driverController.button(4).whileTrue(new coralOut(m_coral, 1));
   }
 
   /**

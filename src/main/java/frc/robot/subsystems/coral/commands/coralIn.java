@@ -21,7 +21,7 @@ public class coralIn extends Command {
   }
 
   public coralIn(coral coral){
-    this(coral, 1); // UPDATE SPEED uytrtyuioiuytrewdfgytrdcvbnmkiuytr
+    this(coral, 0); // UPDATE SPEED uytrtyuioiuytrewdfgytrdcvbnmkiuytr
   }
   
 
@@ -38,7 +38,7 @@ public class coralIn extends Command {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    coral.setSpeed(0); // UPDATE SPEED tresx m,lujdfamkrfoiaeijriadjagskfauihfahii
+    coral.setSpeed(1); // UPDATE SPEED tresx m,lujdfamkrfoiaeijriadjagskfauihfahii
   }
 
   // Returns true when the command should end.
