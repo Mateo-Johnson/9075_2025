@@ -15,6 +15,8 @@ import frc.robot.subsystems.drivetrain.Drivetrain;
 import frc.robot.subsystems.elevator.Elevator;
 import frc.robot.subsystems.elevator.commands.ManualDown;
 import frc.robot.subsystems.elevator.commands.ManualUp;
+import frc.robot.subsystems.lift.Lift;
+import frc.robot.subsystems.lift.commands.LiftUp;
 import frc.robot.subsystems.pneumatics.Pneumatics;
 import frc.robot.subsystems.pneumatics.commands.PneumaticsIn;
 import frc.robot.subsystems.pneumatics.commands.PneumaticsOut;
@@ -32,6 +34,7 @@ public class RobotContainer {
   final Elevator m_elevator;
   final Coral m_coral;
   final Pneumatics m_pneumatics;
+  final Lift m_lift;
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController =
@@ -46,6 +49,7 @@ public class RobotContainer {
     m_elevator = new Elevator();
     m_coral = new Coral();
     m_pneumatics = new Pneumatics();
+    m_lift = new Lift();
 
               m_drivetrain.setDefaultCommand( // IF THE DRIVETRAIN ISN'T DOING ANYTHING ELSE, DO THIS
         new RunCommand(() -> {
@@ -77,7 +81,7 @@ public class RobotContainer {
     m_componentController.button(1).whileTrue(new CoralOut(m_coral,1)); //Move coral out at full speed with button 1 is pressed
     m_componentController.button(2).whileTrue(new PneumaticsIn(m_pneumatics)); //Move Pneumatics In
     m_componentController.button(3).whileTrue(new PneumaticsOut(m_pneumatics)); //Move Pneumatics Out 
-  
+    m_componentController.button(4).whileTrue(new LiftUp(m_lift, 1)); //Lift The Robot 
   }
 
   /**
