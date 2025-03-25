@@ -9,8 +9,6 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
-import frc.robot.subsystems.coral.Coral;
-import frc.robot.subsystems.coral.commands.CoralOut;
 import frc.robot.subsystems.drivetrain.Drivetrain;
 import frc.robot.subsystems.elevator.Elevator;
 import frc.robot.subsystems.elevator.commands.ManualDown;
@@ -32,7 +30,6 @@ public class RobotContainer {
 
   final Drivetrain m_drivetrain;
   final Elevator m_elevator;
-  final Coral m_coral;
   final Pneumatics m_pneumatics;
   final Lift m_lift;
 
@@ -47,7 +44,6 @@ public class RobotContainer {
     
     m_drivetrain = new Drivetrain();
     m_elevator = new Elevator();
-    m_coral = new Coral();
     m_pneumatics = new Pneumatics();
     m_lift = new Lift();
 
@@ -78,10 +74,10 @@ public class RobotContainer {
 
     m_componentController.povUp().whileTrue(new ManualUp(m_elevator,0.5)); // Move elevator up when D-Pad up is pressed
     m_componentController.povDown().whileTrue(new ManualDown(m_elevator,0.25)); // Move elevator down when D-Pad down is pressed
-    m_componentController.button(1).whileTrue(new CoralOut(m_coral, 1)); //Move coral out at full speed with button 1 is pressed
     m_componentController.button(2).whileTrue(new PneumaticsIn(m_pneumatics)); //Move Pneumatics In
     m_componentController.button(3).whileTrue(new PneumaticsOut(m_pneumatics)); //Move Pneumatics Out 
     m_componentController.button(4).whileTrue(new LiftUp(m_lift, 1)); //Lift The Robot 
+
   }
 
   /**
