@@ -5,15 +5,15 @@
 package frc.robot.subsystems.coral.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.subsystems.coral.Coral;
+import frc.robot.subsystems.coral.coral;
 
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
-public class CoralOut extends Command {
-  private final Coral coral;
+public class coralOut extends Command {
+  private final coral coral;
   private final double speed;
 
   /** Creates a new coralOut command. */
-  public CoralOut(Coral coral, double speed){
+  public coralOut(coral coral, double speed){
     this.coral = coral;
     this.speed = -Math.abs(speed);
     addRequirements(coral);
@@ -21,7 +21,7 @@ public class CoralOut extends Command {
 
   //Creates a new CoralOut command with default speed
 
-  public CoralOut(Coral coral){
+  public coralOut(coral coral){
     this(coral, 1);
   }
 

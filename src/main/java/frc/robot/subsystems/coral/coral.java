@@ -13,11 +13,11 @@ import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class Coral extends SubsystemBase {
+public class coral extends SubsystemBase {
 
   private final SparkMax coralMotor = new SparkMax(9, MotorType.kBrushless);
   /** Creates a new coral. */
-  public Coral() {
+  public coral() {
     
     // Configure motor 
     SparkMaxConfig config = new SparkMaxConfig();
