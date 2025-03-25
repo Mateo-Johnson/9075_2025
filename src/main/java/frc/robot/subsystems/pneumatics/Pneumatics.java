@@ -4,11 +4,27 @@
 
 package frc.robot.subsystems.pneumatics;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Pneumatics extends SubsystemBase {
+
+  private final DoubleSolenoid actuators = 
+    new DoubleSolenoid(PneumaticsModuleType.REVPH,0, 1);
+
   /** Creates a new Pneumatics. */
-  public Pneumatics() {}
+
+  //Extends the actuators
+  public void pneumaticsOut() {
+    actuators.set(DoubleSolenoid.Value.kForward);
+  }
+
+  //Retracts the actuators
+  public void pneumaticsIn(){
+    actuators.set(DoubleSolenoid.Value.kReverse);
+  }
+
 
   @Override
   public void periodic() {
