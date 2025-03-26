@@ -5,6 +5,8 @@
 package frc.robot.subsystems.coral;
 
 import com.revrobotics.spark.SparkMax;
+import com.revrobotics.spark.SparkBase.PersistMode;
+import com.revrobotics.spark.SparkBase.ResetMode;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 import com.revrobotics.spark.config.SparkMaxConfig;
 import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
@@ -22,6 +24,7 @@ public class coral extends SubsystemBase {
     config
       .inverted(false)
       .idleMode(IdleMode.kBrake);
+      coralMotor.configure(config, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
   }
 
      //Manually control the coral motor with direct motor power 
