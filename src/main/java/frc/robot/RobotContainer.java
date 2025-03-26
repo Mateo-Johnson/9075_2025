@@ -12,8 +12,6 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.subsystems.coral.coral;
 import frc.robot.subsystems.coral.commands.coralIn;
 import frc.robot.subsystems.coral.commands.coralOut;
-//import frc.robot.subsystems.coral.coral;
-//import frc.robot.subsystems.coral.commands.coralIn;
 import frc.robot.subsystems.drivetrain.Drivetrain;
 import frc.robot.subsystems.elevator.Elevator;
 import frc.robot.subsystems.elevator.commands.ManualDown;
@@ -24,8 +22,6 @@ import frc.robot.subsystems.lift.commands.LiftUp;
 import frc.robot.subsystems.pneumatics.Pneumatics;
 import frc.robot.subsystems.pneumatics.commands.PneumaticsIn;
 import frc.robot.subsystems.pneumatics.commands.PneumaticsOut;
-//import frc.robot.subsystems.pneumatics.commands.PneumaticsIn;
-//import frc.robot.subsystems.pneumatics.commands.PneumaticsOut;
 //import frc.robot.subsystems.pneumatics.commands.PneumaticsToggle;
 import frc.robot.utils.Constants.OIConstants;
 
