@@ -51,8 +51,9 @@ public class RobotContainer {
     m_drivetrain = new Drivetrain();
     m_elevator = new Elevator();
     m_pneumatics = new Pneumatics();
-    m_lift = new Lift();
     m_coral = new coral();
+    m_lift = new Lift();
+   
 
               m_drivetrain.setDefaultCommand( // IF THE DRIVETRAIN ISN'T DOING ANYTHING ELSE, DO THIS
         new RunCommand(() -> {
@@ -79,12 +80,12 @@ public class RobotContainer {
    */
   private void configureBindings() {
 
-    m_componentController.povUp().whileTrue(new ManualUp(m_elevator,.5)); // Move elevator up when D-Pad up is pressed
+    m_componentController.povUp().whileTrue(new ManualUp(m_elevator,.7)); // Move elevator up when D-Pad up is pressed
     m_componentController.povDown().whileTrue(new ManualDown(m_elevator,0.1)); // Move elevator down when D-Pad down is pressed
-    m_componentController.button(2).whileTrue(new PneumaticsIn(m_pneumatics)); //Move Pneumatics In
-    m_componentController.button(3).whileTrue(new PneumaticsOut(m_pneumatics)); //Move Pneumatics Out 
-    m_driverController.button(4).whileTrue(new LiftUp(m_lift, 1)); //Lift The Robot 
-    m_driverController.button(1).whileTrue(new LiftDown(m_lift, 1)); //Lift The Robot 
+    m_driverController.button(1).whileTrue(new PneumaticsIn(m_pneumatics)); //Move Pneumatics In
+    m_driverController.button(4).whileTrue(new PneumaticsOut(m_pneumatics)); //Move Pneumatics Out 
+    m_componentController.button(2).whileTrue(new LiftUp(m_lift, 1)); //Lift The Robot 
+    m_componentController.button(3).whileTrue(new LiftDown(m_lift, 1)); //Lift The Robot 
     //m_componentController.leftBumper().whileTrue(new coralIn(m_coral));
     //m_componentController.rightBumper().whileTrue(new coralOut(m_coral));
     m_componentController.button(1).whileTrue(new coralIn(m_coral, .2));

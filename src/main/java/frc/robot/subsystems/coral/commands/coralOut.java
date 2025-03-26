@@ -16,12 +16,12 @@ public class coralOut extends Command {
   public coralOut(coral coral, double speed) {
     // Use addRequirements() here to declare subsystem dependencies.
     this.coral = coral; 
-    this.speed = -Math.abs(speed);
+    this.speed = Math.abs(speed);
     addRequirements(coral);
   }
 
   public coralOut(coral coral){
-    this(coral, .4); // UPDATE SPEED
+    this(coral, 0.4); // UPDATE SPEED
   }
   
 

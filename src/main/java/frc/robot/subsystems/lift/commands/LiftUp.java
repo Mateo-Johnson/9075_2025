@@ -16,7 +16,7 @@ public class LiftUp extends Command {
   public LiftUp(Lift lift, double speed) {
     // Use addRequirements() here to declare subsystem dependencies.
     this.lift = lift; 
-    this.speed = -Math.abs(speed);
+    this.speed = Math.abs(speed);
     addRequirements(lift);
   }
 

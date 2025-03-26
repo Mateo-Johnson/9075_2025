@@ -25,7 +25,7 @@ public class ManualUp extends Command {
      * @param elevator The elevator subsystem
      */
     public ManualUp(Elevator elevator) {
-        this(elevator, 0.5); // Default speed
+        this(elevator, 0.7); // Default speed
     }
     
     @Override
