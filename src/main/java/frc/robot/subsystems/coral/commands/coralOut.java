@@ -21,7 +21,7 @@ public class coralOut extends Command {
   }
 
   public coralOut(coral coral){
-    this(coral, 1); // UPDATE SPEED
+    this(coral, .4); // UPDATE SPEED
   }
   
 

@@ -21,7 +21,7 @@ public class LiftDown extends Command {
   }
 
   public LiftDown(Lift lift){
-    this(lift, 0);
+    this(lift, 1);
   }
   
 
@@ -38,7 +38,7 @@ public class LiftDown extends Command {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    lift.setSpeed(1);
+    lift.setSpeed(0);
   }
 
   // Returns true when the command should end.
